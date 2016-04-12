@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Abhishek's Website 2</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+ <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+ <style type="text/css">
+	
+		#menubar{
+			height: 50px;
+			background-color: #229AC5;
+			border-bottom: 4px solid #1A7495;
+		}
+		
+		#logo {
+			margin:0;
+			padding:8px 0 10px 20px;
+			font-size:1.7em;
+			color:white;
+			font-weight: bold;
+			float: left;
+		}
+		
+		#runbutton{
+			float:right;
+			color: #229AC5;
+			background-color: white;
+			height: 30px;
+			width: 100px;
+			font-size: 1.2em;
+			margin: 10px 30px 10px 10px;
+			font-weight: bold;
+			border-radius: 6px;
+		}
+		
+		ul{
+			margin:0 auto;
+			list-style:none;
+			float: left;
+			padding: 5px 0 2px 0;;
+			margin-left: 650px;
+			
+			
+			
+		}
+		
+		#toggels li{
+			float:left;
+			font-size: 1.3em;
+			padding: 8px;
+			color: #229AC5;
+			background-color: white; 
+			border-right: 2px solid #229AC5;
+			border-radius: 5px;
+		}
+		
+		.clear{
+			clear:both;
+		}
+		
+		.codeContainer{
+			height:100%;
+			width: 50%;
+			float:left;
+			position:relative;
+			
+		}
+		
+		.codeContainer textarea{
+			height:100%;
+			width:100%;
+			border:none;
+			border-right: 1px solid grey;
+			font-family:monotype;
+			font-size: 1.2em;
+			padding: 10px;
+		}
+		
+		.codelabel{
+			position: absolute;
+			right:10px;
+			top:10px;
+			
+		}
+		
+		#CssContainer, #JsContainer {
+			display:none;
+		}
+		
+		.codeContainer iframe{
+			height:100%;
+			position:relative;
+			left:30px;
+		}
+	
+ 
+ </style>
+
+ </head>
+
+ <body style="margin:0; padding=0;">
+	
+		<div id="wrapper">
+		
+			<div id="menubar">
+	
+				<p id="logo"> RunCode</p>
+			
+				<button id="runbutton"> RUN </button>
+			
+				<ul id="toggels">
+			
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>Result</li>
+			
+				</ul>
+				
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div class="codeContainer" id="htmlContainer">
+			
+				<div class="codelabel">HTML</div>
+				<textarea> Example HTML Code </textarea>
+			
+			</div>
+			
+			<div class="codeContainer" id="CssContainer">
+			
+				<div class="codelabel">CSS</div>
+				<textarea> Example CSS Code </textarea>
+			
+			</div>
+			
+			<div class="codeContainer" id="JsContainer">
+			
+				<div class="codelabel">JavaScript</div>
+				<textarea> Example JS Code </textarea>
+			
+			</div>
+			
+			<div class="codeContainer" id="resultContainer">
+			
+				<div class="codelabel">Result</div>
+				<iframe></iframe>
+			
+			</div>
+			
+	
+	
+		</div>
+		
+		<script>
+		
+			var windowHeight=$(window).height();
+			var menuBarHeight=$("#menubar").height();
+			
+			var codeContainerHeight=windowHeight-menuBarHeight;
+			
+			$(".codeContainer").height(codeContainerHeight+"px");
+		
+		</script>
+
+ 
+ </body>
+</html>
+
